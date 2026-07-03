@@ -118,8 +118,33 @@
   /* ---------- Journey memory (localStorage) ---------- */
   var ROMANS = ["", "I", "II", "III", "IV", "V", "VI"];
   var TOTAL_STATIONS = 6;
-  var KEY_DONE = "ersteUrsache.done";
-  var KEY_POS = "ersteUrsache.pos";
+
+  /* Language-aware bits: German lives at the root, other languages in
+     subfolders (e.g. /en/) with localized chapter filenames. */
+  var lang = (document.documentElement.getAttribute("lang") || "de").slice(0, 2);
+  var isEN = lang === "en";
+  var CH_PREFIX = isEN ? "chapter-" : "kapitel-";
+  var CH_RE = /(?:kapitel|chapter)-(\d)/;
+
+  var STR = {
+    de: {
+      completed: "✓ Abgeschlossen",
+      resumeDone: "Du hast die Reise vollendet — Station VI erneut besuchen",
+      resumeContinue: "Setze deine Reise fort · Station ",
+      pill: 'Weiterlesen, wo du warst <span class="arrow">↓</span>'
+    },
+    en: {
+      completed: "✓ Completed",
+      resumeDone: "You’ve completed the journey — revisit Station VI",
+      resumeContinue: "Continue your journey · Station ",
+      pill: 'Continue where you left off <span class="arrow">↓</span>'
+    }
+  };
+  var T = isEN ? STR.en : STR.de;
+
+  /* Progress is tracked per language so the two editions never cross-link. */
+  var KEY_DONE = "ersteUrsache.done" + (isEN ? ".en" : "");
+  var KEY_POS = "ersteUrsache.pos" + (isEN ? ".en" : "");
 
   function store(key, value) {
     try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
@@ -133,11 +158,11 @@
 
   var done = load(KEY_DONE, []);
   var pos = load(KEY_POS, null);
-  var match = location.pathname.match(/kapitel-(\d)/);
+  var match = location.pathname.match(CH_RE);
   var chapter = match ? parseInt(match[1], 10) : 0;
 
   function chapterFromHref(href) {
-    var m = (href || "").match(/kapitel-(\d)/);
+    var m = (href || "").match(CH_RE);
     return m ? parseInt(m[1], 10) : 0;
   }
 
@@ -158,7 +183,7 @@
       if (eyebrow && !eyebrow.querySelector(".station-state")) {
         var tag = document.createElement("span");
         tag.className = "station-state";
-        tag.textContent = "✓ Abgeschlossen";
+        tag.textContent = T.completed;
         eyebrow.appendChild(tag);
       }
     } else if (pos && pos.c === c) {
@@ -169,13 +194,13 @@
   var banner = document.getElementById("resumeBanner");
   if (banner) {
     if (done.length >= TOTAL_STATIONS) {
-      banner.innerHTML = '<a class="resume-link" href="kapitel-6.html">' +
-        '<span class="resume-mark">✦</span> Du hast die Reise vollendet — Station VI erneut besuchen ' +
-        '<span class="arrow">→</span></a>';
+      banner.innerHTML = '<a class="resume-link" href="' + CH_PREFIX + '6.html">' +
+        '<span class="resume-mark">✦</span> ' + T.resumeDone +
+        ' <span class="arrow">→</span></a>';
       banner.hidden = false;
     } else if (pos && pos.c >= 1 && pos.c <= TOTAL_STATIONS) {
-      banner.innerHTML = '<a class="resume-link" href="kapitel-' + pos.c + '.html">' +
-        '<span class="resume-mark">✦</span> Setze deine Reise fort · Station ' + ROMANS[pos.c] +
+      banner.innerHTML = '<a class="resume-link" href="' + CH_PREFIX + pos.c + '.html">' +
+        '<span class="resume-mark">✦</span> ' + T.resumeContinue + ROMANS[pos.c] +
         ' <span class="arrow">→</span></a>';
       banner.hidden = false;
     }
@@ -219,7 +244,7 @@
       var pill = document.createElement("button");
       pill.type = "button";
       pill.className = "resume-pill";
-      pill.innerHTML = 'Weiterlesen, wo du warst <span class="arrow">↓</span>';
+      pill.innerHTML = T.pill;
       document.body.appendChild(pill);
       var savedY = pos.y;
       requestAnimationFrame(function () { pill.classList.add("is-shown"); });
