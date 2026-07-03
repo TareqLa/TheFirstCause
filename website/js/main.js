@@ -122,9 +122,9 @@
   /* Language-aware bits: German lives at the root, other languages in
      subfolders (e.g. /en/) with localized chapter filenames. */
   var lang = (document.documentElement.getAttribute("lang") || "de").slice(0, 2);
-  var isEN = lang === "en";
-  var CH_PREFIX = isEN ? "chapter-" : "kapitel-";
-  var CH_RE = /(?:kapitel|chapter)-(\d)/;
+  var CH_PREFIXES = { de: "kapitel-", en: "chapter-", es: "capitulo-" };
+  var CH_PREFIX = CH_PREFIXES[lang] || CH_PREFIXES.de;
+  var CH_RE = /(?:kapitel|chapter|capitulo)-(\d)/;
 
   var STR = {
     de: {
@@ -138,13 +138,20 @@
       resumeDone: "You’ve completed the journey — revisit Station VI",
       resumeContinue: "Continue your journey · Station ",
       pill: 'Continue where you left off <span class="arrow">↓</span>'
+    },
+    es: {
+      completed: "✓ Completado",
+      resumeDone: "Has completado el viaje — vuelve a visitar la Estación VI",
+      resumeContinue: "Continúa tu viaje · Estación ",
+      pill: 'Sigue donde lo dejaste <span class="arrow">↓</span>'
     }
   };
-  var T = isEN ? STR.en : STR.de;
+  var T = STR[lang] || STR.de;
 
-  /* Progress is tracked per language so the two editions never cross-link. */
-  var KEY_DONE = "ersteUrsache.done" + (isEN ? ".en" : "");
-  var KEY_POS = "ersteUrsache.pos" + (isEN ? ".en" : "");
+  /* Progress is tracked per language so the editions never cross-link. */
+  var KEY_SUFFIX = lang === "de" ? "" : "." + lang;
+  var KEY_DONE = "ersteUrsache.done" + KEY_SUFFIX;
+  var KEY_POS = "ersteUrsache.pos" + KEY_SUFFIX;
 
   function store(key, value) {
     try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}

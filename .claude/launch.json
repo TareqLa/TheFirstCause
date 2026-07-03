@@ -4,8 +4,14 @@
     {
       "name": "website",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "4173", "--directory", "website"],
-      "port": 4173
+      "runtimeArgs": ["-m", "http.server", "8000", "--directory", "website"],
+      "port": 8000
+    },
+    {
+      "name": "website-verify",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8012", "--directory", "website"],
+      "port": 8012
     }
   ]
 }
