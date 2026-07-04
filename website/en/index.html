@@ -42,8 +42,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <a class="skip-link" href="#preface">Skip to content</a>
 
   <div class="progress-track"><span></span></div>
 
@@ -68,7 +70,7 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <canvas id="stars"></canvas>
+    <canvas id="stars" aria-hidden="true" role="presentation"></canvas>
     <p class="hero-kicker">A journey in six stations</p>
     <h1>The Journey to the Beginning of Everything</h1>
     <p class="hero-sub">What if you held in your hands irrefutable proof that the universe must have a Creator?</p>
@@ -97,6 +99,22 @@
         <p class="reveal">The only logical conclusion for the universe and the origin of life is an almighty Creator. Neither chance nor a mindless force can be responsible for it.</p>
         <p class="reveal">The chain of reasoning rests on necessary truths of logic. These hold independently of human or machine progress. For a logical impossibility remains impossible forever, just as 2&nbsp;+&nbsp;2 will never equal 5.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CHAIN OF REASONING ============ -->
+  <section class="section" id="argument" aria-label="The logical chain of reasoning">
+    <div class="section-inner">
+      <p class="section-kicker reveal">The Chain of Reasoning</p>
+      <h2 class="section-title reveal">From Nothing to the First Cause — Step by Step</h2>
+      <ol class="logic-chain">
+        <li class="reveal"><span class="lc-tag">Premise 1</span><span class="lc-text">Nothing comes from nothing.</span></li>
+        <li class="reveal"><span class="lc-tag">Premise 2</span><span class="lc-text">The universe began to exist.</span></li>
+        <li class="reveal"><span class="lc-tag">Premise 3</span><span class="lc-text">It cannot have caused itself, cannot be eternal, and cannot have arisen by chance.</span></li>
+        <li class="reveal lc-conclusion"><span class="lc-tag">Conclusion</span><span class="lc-text">There is a necessary First Cause that acts with will.</span></li>
+        <li class="reveal"><span class="lc-tag">Its Attributes</span><span class="lc-text">Eternal · all-powerful · all-knowing · one.</span></li>
+        <li class="reveal lc-question"><span class="lc-tag">The Question</span><span class="lc-text">Which message describes exactly this Cause?</span></li>
+      </ol>
     </div>
   </section>
 

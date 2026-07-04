@@ -213,6 +213,106 @@
     }
   }
 
+  /* ----- Chapter pages: orientation + progress chip ----- */
+  var STATION_LABEL = {
+    de: "Station {n} von VI",
+    en: "Station {n} of VI",
+    es: "Estación {n} de VI"
+  };
+  var TOC_LABEL = { de: "In diesem Kapitel", en: "In this chapter", es: "En este capítulo" };
+  var CHIP_LABEL = { de: "Deine Reise", en: "Your journey", es: "Tu viaje" };
+  var CHIP_ARIA = {
+    de: "{d} von 6 Stationen abgeschlossen — zur Übersicht",
+    en: "{d} of 6 stations completed — back to overview",
+    es: "{d} de 6 estaciones completadas — volver al inicio"
+  };
+
+  /* "Station III von VI" in the chapter meta line */
+  if (chapter) {
+    var meta = document.querySelector(".chapter-meta");
+    if (meta) {
+      var mDot = document.createElement("span");
+      mDot.className = "meta-dot";
+      mDot.textContent = "·";
+      meta.appendChild(mDot);
+      meta.appendChild(document.createTextNode(
+        (STATION_LABEL[lang] || STATION_LABEL.de).replace("{n}", ROMANS[chapter])
+      ));
+    }
+  }
+
+  /* Mini table of contents for the long chapters (5 and 6) */
+  if (chapter >= 5) {
+    var prose = document.querySelector("main .prose");
+    var heads = document.querySelectorAll("main .prose h2");
+    if (prose && heads.length >= 2) {
+      var toc = document.createElement("details");
+      toc.className = "chapter-toc";
+      var sum = document.createElement("summary");
+      sum.textContent = TOC_LABEL[lang] || TOC_LABEL.de;
+      toc.appendChild(sum);
+      var list = document.createElement("ol");
+      heads.forEach(function (h, i) {
+        if (!h.id) h.id = "abschnitt-" + (i + 1);
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.href = "#" + h.id;
+        a.textContent = h.textContent;
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      toc.appendChild(list);
+      prose.insertBefore(toc, prose.firstChild);
+    }
+  }
+
+  /* Progress chip: "Deine Reise ●●●○○○ 3/6" */
+  function renderChip() {
+    if (!chapter || !done.length) return;
+    var chip = document.querySelector(".journey-chip");
+    if (!chip) {
+      chip = document.createElement("a");
+      chip.className = "journey-chip";
+      chip.href = "index.html";
+      document.body.appendChild(chip);
+    }
+    chip.setAttribute("aria-label",
+      (CHIP_ARIA[lang] || CHIP_ARIA.de).replace("{d}", done.length));
+    chip.innerHTML = "";
+    var label = document.createElement("span");
+    label.className = "jc-label";
+    label.textContent = CHIP_LABEL[lang] || CHIP_LABEL.de;
+    chip.appendChild(label);
+    var dots = document.createElement("span");
+    dots.className = "jc-dots";
+    dots.setAttribute("aria-hidden", "true");
+    for (var i = 1; i <= TOTAL_STATIONS; i++) {
+      var d = document.createElement("span");
+      d.className = "jc-dot" + (i <= done.length ? " is-done" : "");
+      d.textContent = i <= done.length ? "●" : "○";
+      dots.appendChild(d);
+    }
+    chip.appendChild(dots);
+    var count = document.createElement("span");
+    count.className = "jc-count";
+    count.textContent = done.length + "/" + TOTAL_STATIONS;
+    chip.appendChild(count);
+  }
+  renderChip();
+
+  /* Fade the chip out when the footer scrolls into view so it never
+     overlaps the footer links. */
+  var chipEl = document.querySelector(".journey-chip");
+  var footerEl = document.querySelector("footer");
+  if (chipEl && footerEl && "IntersectionObserver" in window) {
+    var chipIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        chipEl.classList.toggle("is-hidden", e.isIntersecting);
+      });
+    }, { threshold: 0 });
+    chipIO.observe(footerEl);
+  }
+
   /* ----- Chapter pages: save position, mark completion, resume pill ----- */
   if (chapter) {
     var saveTimer = null;
@@ -239,6 +339,7 @@
             document.querySelectorAll(".nav-stations a, .side-dots a").forEach(function (a) {
               if (chapterFromHref(a.getAttribute("href")) === chapter) a.classList.add("is-done");
             });
+            renderChip();
           }
           doneIO.disconnect();
         });
@@ -390,6 +491,59 @@
       a.addEventListener("click", function () { closeMenu(); });
     });
   }
+
+  /* ---------- Make Quran references clickable (content untouched) ---------- */
+  var REF_LABEL = {
+    de: "Vers {ref} auf quran.com lesen",
+    en: "Read verse {ref} on quran.com",
+    es: "Leer el versículo {ref} en quran.com"
+  };
+  var refLabel = REF_LABEL[lang] || REF_LABEL.de;
+
+  function quranLink(ref, text) {
+    var a = document.createElement("a");
+    a.href = "https://quran.com/" + ref;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.setAttribute("aria-label", refLabel.replace("{ref}", ref));
+    a.textContent = text;
+    return a;
+  }
+
+  /* 1) The gold [surah:ayah] tags under verse blocks */
+  document.querySelectorAll(".verse-ref").forEach(function (el) {
+    if (el.querySelector("a")) return;
+    var m = el.textContent.match(/(\d{1,3}):(\d{1,3})(?:-(\d{1,3}))?/);
+    if (!m) return;
+    var ref = m[3] ? m[1] + ":" + m[2] + "-" + m[3] : m[1] + ":" + m[2];
+    var a = quranLink(ref, el.textContent);
+    el.textContent = "";
+    el.appendChild(a);
+  });
+
+  /* 2) Inline (surah:ayah) citations in chapter prose — text nodes only,
+     so the book text in the HTML source is never edited. */
+  var REF_RE = /\((\d{1,3}:\d{1,3}(?:-\d{1,3})?)\)/g;
+  document.querySelectorAll(".prose p, .prose li").forEach(function (p) {
+    Array.prototype.slice.call(p.childNodes).forEach(function (node) {
+      if (node.nodeType !== 3) return; /* text nodes only */
+      var s = node.nodeValue;
+      REF_RE.lastIndex = 0;
+      if (!REF_RE.test(s)) return;
+      REF_RE.lastIndex = 0;
+      var frag = document.createDocumentFragment();
+      var lastIdx = 0, m;
+      while ((m = REF_RE.exec(s))) {
+        frag.appendChild(document.createTextNode(s.slice(lastIdx, m.index)));
+        var a = quranLink(m[1], m[0]);
+        a.className = "quran-ref";
+        frag.appendChild(a);
+        lastIdx = m.index + m[0].length;
+      }
+      frag.appendChild(document.createTextNode(s.slice(lastIdx)));
+      node.parentNode.replaceChild(frag, node);
+    });
+  });
 
   /* ---------- Scroll reveal ---------- */
   var revealEls = document.querySelectorAll(".reveal");

@@ -1049,12 +1049,12 @@ footer .footer-nav a:hover { color: var(--gold); }
   .nav-stations .nav-label { display: none; }
   .nav-stations { gap: 0.1rem; }
   .topnav { padding: 0.9rem 1.1rem; }
+  .side-dots { display: none; }
 }
 
 @media (max-width: 520px) {
   .brand .brand-text { display: none; }
   .brand .brand-mark { font-size: 1.5rem; }
-  .side-dots { display: none; }
   .station { grid-template-columns: 2.6rem 1fr; gap: 1rem; }
   .station-node { width: 2.6rem; height: 2.6rem; font-size: 1.05rem; }
   .journey-path::before { left: 1.3rem; }
@@ -1226,6 +1226,180 @@ footer .footer-nav a:hover { color: var(--gold); }
   .brand .brand-text { display: inline; }
   .brand .brand-mark { font-size: 1.2rem; }
 }
+
+/* ---------- Logic chain (landing page argument map) ---------- */
+.logic-chain {
+  position: relative;
+  max-width: 40rem;
+  margin: 3.5rem auto 0;
+  padding: 0;
+  list-style: none;
+}
+.logic-chain::before {
+  content: "";
+  position: absolute;
+  top: 1.4rem;
+  bottom: 1.6rem;
+  left: 0.56rem;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(212, 175, 95, 0.15), var(--gold) 55%, rgba(212, 175, 95, 0.25));
+}
+.logic-chain li {
+  position: relative;
+  padding: 1.05rem 0 1.05rem 2.7rem;
+}
+.logic-chain li::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 1.6rem;
+  width: 0.78rem;
+  height: 0.78rem;
+  border-radius: 50%;
+  border: 1px solid var(--gold-soft);
+  background: var(--bg);
+}
+.logic-chain .lc-tag {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.logic-chain .lc-text {
+  font-family: var(--serif);
+  font-size: 1.28rem;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.logic-chain li.lc-conclusion {
+  margin: 0.9rem 0;
+  border-left: 2px solid var(--gold);
+  border-radius: 0 12px 12px 0;
+  background: linear-gradient(90deg, rgba(212, 175, 95, 0.09), transparent 78%);
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+.logic-chain li.lc-conclusion::before {
+  left: 0.14rem;
+  top: 1.95rem;
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+.logic-chain li.lc-conclusion .lc-tag { color: var(--gold); }
+.logic-chain li.lc-conclusion .lc-text { font-size: 1.42rem; font-weight: 600; }
+.logic-chain li.lc-question .lc-text {
+  font-style: italic;
+  color: var(--gold);
+}
+@media (max-width: 520px) {
+  .logic-chain li { padding-left: 2.2rem; }
+  .logic-chain .lc-text { font-size: 1.15rem; }
+  .logic-chain li.lc-conclusion .lc-text { font-size: 1.26rem; }
+}
+
+/* ---------- Chapter mini table of contents ---------- */
+.chapter-toc {
+  margin: 0 0 2.4rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 12px;
+  background: rgba(10, 16, 32, 0.5);
+  padding: 0.95rem 1.3rem;
+}
+.chapter-toc summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.chapter-toc ol {
+  margin: 1rem 0 0.3rem;
+  padding-left: 1.3rem;
+}
+.chapter-toc li { margin: 0.5rem 0; }
+.chapter-toc a {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.chapter-toc a:hover { color: var(--gold); }
+
+/* ---------- Journey progress chip ---------- */
+.journey-chip {
+  position: fixed;
+  left: 1.2rem;
+  bottom: 1.2rem;
+  z-index: 84;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(10, 16, 32, 0.92);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  backdrop-filter: blur(6px);
+  transition: opacity 0.35s ease, visibility 0.35s;
+}
+.journey-chip:hover { color: var(--ink); border-color: var(--line); }
+.journey-chip.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.journey-chip .jc-dots { display: inline-flex; gap: 0.18rem; letter-spacing: 0; }
+.journey-chip .jc-dot { color: rgba(233, 230, 220, 0.28); font-size: 0.58rem; }
+.journey-chip .jc-dot.is-done { color: var(--gold); }
+.journey-chip .jc-count { color: var(--ink-soft); }
+@media (max-width: 520px) {
+  .journey-chip { left: 0.8rem; bottom: 0.8rem; padding: 0.45rem 0.8rem; }
+  .journey-chip .jc-label { display: none; }
+}
+
+/* ---------- Accessibility: visible focus + skip link ---------- */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 200;
+  background: var(--gold);
+  color: #10131c;
+  padding: 0.7rem 1.2rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  border-radius: 0 0 8px 0;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- Quran reference links (injected by main.js) ---------- */
+.verse-ref a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+.prose a.quran-ref {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(212, 175, 95, 0.45);
+}
+.prose a.quran-ref:hover,
+.verse-ref a:hover { border-bottom-style: solid; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

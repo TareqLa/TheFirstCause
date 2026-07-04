@@ -42,8 +42,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <a class="skip-link" href="#vorwort">Zum Inhalt springen</a>
 
   <div class="progress-track"><span></span></div>
 
@@ -68,7 +70,7 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <canvas id="stars"></canvas>
+    <canvas id="stars" aria-hidden="true" role="presentation"></canvas>
     <p class="hero-kicker">Eine Reise in sechs Stationen</p>
     <h1>Die Reise zum Anfang von allem</h1>
     <p class="hero-sub">Was wäre, wenn du unwiderlegbare Beweise in den Händen hältst, dass das Universum einen Schöpfer haben muss?</p>
@@ -97,6 +99,22 @@
         <p class="reveal">Die einzig logische Schlussfolgerung für das Universum und den Ursprung des Lebens ist ein allmächtiger Schöpfer. Weder Zufall noch eine geistlose Kraft können dafür verantwortlich sein.</p>
         <p class="reveal">Die Argumentationskette gründet auf notwendigen Wahrheiten der Logik. Diese gelten unabhängig von menschlichem oder maschinellem Fortschritt. Denn eine logische Unmöglichkeit bleibt für immer unmöglich, so wie 2&nbsp;+&nbsp;2 niemals 5 ergeben wird.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ BEWEISKETTE ============ -->
+  <section class="section" id="beweiskette" aria-label="Die logische Argumentationskette">
+    <div class="section-inner">
+      <p class="section-kicker reveal">Die Beweiskette</p>
+      <h2 class="section-title reveal">Vom Nichts zur Ersten Ursache — Schritt für Schritt</h2>
+      <ol class="logic-chain">
+        <li class="reveal"><span class="lc-tag">Prämisse 1</span><span class="lc-text">Aus dem Nichts entsteht nichts.</span></li>
+        <li class="reveal"><span class="lc-tag">Prämisse 2</span><span class="lc-text">Das Universum begann zu existieren.</span></li>
+        <li class="reveal"><span class="lc-tag">Prämisse 3</span><span class="lc-text">Es kann sich nicht selbst verursacht haben, nicht ewig sein und nicht durch Zufall entstanden sein.</span></li>
+        <li class="reveal lc-conclusion"><span class="lc-tag">Schlussfolgerung</span><span class="lc-text">Es gibt eine notwendige, willentlich handelnde Erste Ursache.</span></li>
+        <li class="reveal"><span class="lc-tag">Ihre Eigenschaften</span><span class="lc-text">Ewig · allmächtig · allwissend · einzig.</span></li>
+        <li class="reveal lc-question"><span class="lc-tag">Die Frage</span><span class="lc-text">Welche Botschaft beschreibt genau diese Ursache?</span></li>
+      </ol>
     </div>
   </section>
 

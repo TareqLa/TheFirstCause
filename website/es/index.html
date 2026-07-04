@@ -42,8 +42,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 </head>
 <body>
+  <a class="skip-link" href="#prefacio">Saltar al contenido</a>
 
   <div class="progress-track"><span></span></div>
 
@@ -68,7 +70,7 @@
 
   <!-- ============ HERO ============ -->
   <header class="hero">
-    <canvas id="stars"></canvas>
+    <canvas id="stars" aria-hidden="true" role="presentation"></canvas>
     <p class="hero-kicker">Un viaje en seis estaciones</p>
     <h1>El viaje al origen de todo</h1>
     <p class="hero-sub">¿Y si tuvieras en tus manos una prueba irrefutable de que el universo debe tener un Creador?</p>
@@ -97,6 +99,22 @@
         <p class="reveal">La única conclusión lógica para el universo y el origen de la vida es un Creador todopoderoso. Ni el azar ni una fuerza sin mente pueden ser responsables de ello.</p>
         <p class="reveal">La cadena de razonamiento se fundamenta en verdades necesarias de la lógica. Estas son válidas con independencia del progreso humano o de las máquinas. Pues una imposibilidad lógica permanece imposible para siempre, del mismo modo que 2&nbsp;+&nbsp;2 nunca dará 5.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ CADENA DE RAZONAMIENTO ============ -->
+  <section class="section" id="argumento" aria-label="La cadena de razonamiento lógico">
+    <div class="section-inner">
+      <p class="section-kicker reveal">La cadena de razonamiento</p>
+      <h2 class="section-title reveal">De la nada a la Primera Causa — paso a paso</h2>
+      <ol class="logic-chain">
+        <li class="reveal"><span class="lc-tag">Premisa 1</span><span class="lc-text">De la nada no surge nada.</span></li>
+        <li class="reveal"><span class="lc-tag">Premisa 2</span><span class="lc-text">El universo comenzó a existir.</span></li>
+        <li class="reveal"><span class="lc-tag">Premisa 3</span><span class="lc-text">No pudo causarse a sí mismo, no puede ser eterno y no pudo surgir por azar.</span></li>
+        <li class="reveal lc-conclusion"><span class="lc-tag">Conclusión</span><span class="lc-text">Existe una Primera Causa necesaria que actúa con voluntad.</span></li>
+        <li class="reveal"><span class="lc-tag">Sus atributos</span><span class="lc-text">Eterna · todopoderosa · omnisciente · única.</span></li>
+        <li class="reveal lc-question"><span class="lc-tag">La pregunta</span><span class="lc-text">¿Qué mensaje describe exactamente esta Causa?</span></li>
+      </ol>
     </div>
   </section>
 
