@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signs the Quran Is From God — The Linguistic Miracle and Knowledge No One Could Have Known | The First Cause</title>
+  <meta name="description" content="An illiterate man, a book no poet could imitate, and knowledge of the expanding universe, the Big Bang, embryology and lost history — revealed in the 7th century, confirmed centuries later. Swipe through the signs.">
+  <link rel="canonical" href="https://tareqla.github.io/TheFirstCause/en/signs.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The First Cause">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Signs the Quran Is From God — Knowledge No One Could Have Known">
+  <meta property="og:description" content="An illiterate man, a book no poet could imitate, and scientific facts discovered only 1,000 years later. Swipe through the signs — one conclusion.">
+  <meta property="og:url" content="https://tareqla.github.io/TheFirstCause/en/signs.html">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Signs the Quran Is From God — The Linguistic Miracle and Knowledge No One Could Have Known",
+    "inLanguage": "en",
+    "url": "https://tareqla.github.io/TheFirstCause/en/signs.html",
+    "about": ["Quran", "Scientific miracles in the Quran", "Linguistic miracle of the Quran", "Divine origin of the Quran", "Islam"],
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "The First Cause",
+      "url": "https://tareqla.github.io/TheFirstCause/en/"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Spectral:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <style>
+    /* ---------- Signs slideshow ---------- */
+    .deck-stars {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .deck {
+      position: relative;
+      z-index: 1;
+    }
+    .slide {
+      position: relative;
+      display: flex;
+      padding: 7rem 1.5rem 6.5rem;
+      min-height: 60vh;
+    }
+    .slide-inner {
+      max-width: 46rem;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+    }
+    .slide-tag {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 1.6rem;
+    }
+    .slide-title {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1.15;
+      color: #f0ead6;
+      margin: 0 0 1.4rem;
+    }
+    .slide-text {
+      font-family: var(--serif);
+      font-size: clamp(1.25rem, 2.9vw, 1.75rem);
+      line-height: 1.6;
+      color: var(--ink);
+      margin: 0 0 1.8rem;
+    }
+    .slide-text.long { font-size: clamp(1.08rem, 2.3vw, 1.4rem); }
+    .slide-text + .slide-text { margin-top: -0.6rem; }
+    .slide-sub {
+      font-family: var(--body);
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin: 0 0 1.8rem;
+    }
+    .slide-verse {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.55rem 1.3rem;
+      margin-bottom: 1.9rem;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+    .slide-verse:hover { border-color: var(--gold); background: rgba(212, 175, 95, 0.07); }
+    .slide-timeline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0;
+    }
+    .slide-timeline .tl-line {
+      display: inline-block;
+      width: clamp(2rem, 8vw, 4.5rem);
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+    .slide-timeline strong { color: var(--gold-soft); font-weight: 600; }
+    .slide-hint {
+      font-family: var(--sans);
+      font-size: 0.74rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 2.6rem;
+    }
+    .slide-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2.2rem;
+    }
+    .slide .ornament { margin: 0 0 1.6rem; }
+
+    /* Deck mode (JS enabled): one slide at a time */
+    body.deck-on { overflow: hidden; height: 100dvh; }
+    body.deck-on .deck {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+    }
+    body.deck-on .slide {
+      position: absolute;
+      inset: 0;
+      min-height: 0;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.55s ease, transform 0.55s ease, visibility 0s linear 0.55s;
+      visibility: hidden;
+      pointer-events: none;
+      padding-bottom: 7.5rem;
+    }
+    body.deck-on .slide.is-active {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+      pointer-events: auto;
+      transition: opacity 0.55s ease, transform 0.55s ease, visibility 0s;
+    }
+    body.deck-on .slide.is-left { transform: translateY(-26px); }
+    body.deck-on footer { display: none; }
+
+    /* Controls */
+    .deck-controls {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 20;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 1.6rem 1.5rem 1.4rem;
+      background: linear-gradient(180deg, rgba(6, 10, 19, 0), rgba(6, 10, 19, 0.92) 40%);
+      pointer-events: none;
+    }
+    body.deck-on .deck-controls { display: flex; }
+    .deck-bar {
+      width: min(20rem, 60vw);
+      height: 2px;
+      background: rgba(233, 230, 220, 0.1);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .deck-bar span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #8a6d2f, var(--gold), #f0d896);
+      transition: width 0.4s ease;
+    }
+    .deck-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      pointer-events: auto;
+    }
+    .deck-btn {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: rgba(6, 10, 19, 0.6);
+      color: var(--gold);
+      font-size: 1.15rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: border-color 0.25s ease, background 0.25s ease, opacity 0.25s ease;
+    }
+    .deck-btn:hover { border-color: var(--gold); background: rgba(212, 175, 95, 0.1); }
+    .deck-btn:disabled { opacity: 0.25; cursor: default; }
+    .deck-count {
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      color: var(--muted);
+      min-width: 5.2rem;
+      text-align: center;
+    }
+    .deck-count b { color: var(--gold); font-weight: 600; }
+
+    @media (max-width: 520px) {
+      .slide { padding: 5.5rem 1.15rem 6rem; }
+      body.deck-on .slide { padding-bottom: 8rem; }
+      .slide-text { line-height: 1.55; }
+      .slide-text.long { font-size: 1rem; line-height: 1.62; }
+      .slide-timeline { flex-wrap: wrap; row-gap: 0.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#deck">Skip to content</a>
+
+  <nav class="topnav is-scrolled">
+    <a class="brand" href="index.html"><span class="brand-mark">✦</span> <span class="brand-text">The First Cause</span></a>
+    <div class="nav-stations">
+      <span class="nav-label">The Journey</span>
+      <a href="chapter-1.html" title="Station 1">I</a>
+      <a href="chapter-2.html" title="Station 2">II</a>
+      <a href="chapter-3.html" title="Station 3">III</a>
+      <a href="chapter-4.html" title="Station 4">IV</a>
+      <a href="chapter-5.html" title="Station 5">V</a>
+      <a href="chapter-6.html" title="Station 6">VI</a>
+      <a class="nav-link" href="resources.html">Resources</a>
+    </div>
+  </nav>
+
+  <div class="deck-stars"><canvas id="stars" aria-hidden="true" role="presentation"></canvas></div>
+
+  <main class="deck" id="deck" aria-roledescription="carousel" aria-label="The signs that the Quran is from God">
+
+    <!-- Title -->
+    <section class="slide is-active" aria-label="Introduction">
+      <div class="slide-inner">
+        <p class="slide-tag">The First Cause · The Signs</p>
+        <h1 class="slide-title">Why the Quran can only be from God</h1>
+        <p class="slide-sub">An illiterate man, a book no poet could imitate, and knowledge that was discovered only 1,000 years later. Judge for yourself where it must come from.</p>
+        <p class="slide-hint">Swipe or use the arrows ↓</p>
+      </div>
+    </section>
+
+    <!-- Part I · The perfect match -->
+    <section class="slide" aria-label="The conclusion of logic">
+      <div class="slide-inner">
+        <p class="slide-tag">Part I · The perfect match</p>
+        <p class="slide-text long">Through logic we have arrived at an irrefutable conclusion: there must be an eternal, self-existing, almighty and necessary Creator, who is the first cause behind the universe and all existence.</p>
+        <p class="slide-text long">If we look at all religions, is there one among them whose religious text describes God in this way?</p>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="The text that matches">
+      <div class="slide-inner">
+        <p class="slide-tag">Part I · The perfect match</p>
+        <p class="slide-text long">Well, there is indeed a religious text that stands apart from all other religions and reflects exactly the same properties that we have determined through logical reasoning.</p>
+        <div class="verse" style="margin: 1.4rem auto;">
+          <p class="verse-text" style="font-size: clamp(1.1rem, 2.4vw, 1.4rem);">He has never had offspring, nor was He born. And there is none comparable to Him.</p>
+          <span class="verse-ref">[112:3-4]</span>
+        </div>
+        <div class="verse" style="margin: 1.4rem auto;">
+          <p class="verse-text" style="font-size: clamp(1.1rem, 2.4vw, 1.4rem);">He is the First and the Last, the Most High and Most Near. …</p>
+          <span class="verse-ref">[57:3]</span>
+        </div>
+        <p class="slide-timeline" style="margin-top: 1.6rem;"><span>English rendering: Dr. Mustafa Khattab, The Clear Quran</span></p>
+      </div>
+    </section>
+
+    <!-- Part II · The linguistic miracle -->
+    <section class="slide" aria-label="Thought experiment: the footballer">
+      <div class="slide-inner">
+        <p class="slide-tag">Part II · The linguistic miracle</p>
+        <p class="slide-text long">To grasp this distinctive feature, imagine the following: a forty-year-old man who has never played football in his life steps onto a football field for the first time and makes the best players in the world, such as Messi and Ronaldo, look like beginners. Could someone without experience, without having completed a single training session, without ever having played with the ball, become the best player in the world overnight?</p>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Thought experiment: the poet">
+      <div class="slide-inner">
+        <p class="slide-tag">Part II · The linguistic miracle</p>
+        <p class="slide-text long">This is, of course, not possible. Then what about this: someone tells you about a man who has never composed a poem, never read a single line of literature and can neither read nor write. One morning this man gets up and suddenly begins to proclaim verses that surpass everything that Shakespeare, Goethe, García Lorca or any master of poetry has ever produced. Do you consider that possible?</p>
+        <p class="slide-text long">Such a miracle would only be possible in a Disney story.</p>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="The story of the Quran">
+      <div class="slide-inner">
+        <p class="slide-tag">Part II · The linguistic miracle</p>
+        <p class="slide-text long">If that is impossible, then ask yourself the following question: How is it possible that this is exactly what the story of the Quran reflects, which took place over 1,400 years ago on the Arabian Peninsula?</p>
+        <p class="slide-text long">The Prophet Muhammad ﷺ, however, had no talent for poetry and had never composed any poems. Like most people of that time, he could neither read nor write. Yet after forty years, he suddenly began, overnight, to speak verses that surpassed everything ever composed in the Arabic language.</p>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="The unanswered challenge">
+      <div class="slide-inner">
+        <p class="slide-tag">Part II · The linguistic miracle</p>
+        <p class="slide-text long">In the Quran, God directly challenged the masters of poetry: if they doubted its origin, then they should produce just a single chapter of the same kind. Yet even the most gifted poets failed.</p>
+        <p class="slide-text long">To this day the challenge has remained unbroken. No poet and no linguist has ever been able to replicate the linguistic and literary uniqueness of the Quran.</p>
+        <p class="slide-timeline"><span>Challenged <strong>7th century</strong></span><span class="tl-line"></span><span>Unanswered <strong>to this day</strong></span></p>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="Nothing to gain">
+      <div class="slide-inner">
+        <p class="slide-tag">Part II · The linguistic miracle</p>
+        <p class="slide-text long">They called the Prophet ﷺ a magician and tried to bribe him with wealth, power and the most beautiful women of Mecca. Everything a swindler could wish for. He was only to abandon the message. Yet he refused without hesitation.</p>
+        <p class="slide-text long">Bearing in mind that the Quran did not come into being in a quiet writing room, but was transmitted orally while the Prophet ﷺ endured war, hunger, persecution and boycott by his own people, the linguistic miracle appears all the more inexplicable by human standards.</p>
+      </div>
+    </section>
+
+    <!-- Part III · He was no liar -->
+    <section class="slide" aria-label="His enemies entrusted him their goods">
+      <div class="slide-inner">
+        <p class="slide-tag">Part III · He was no liar</p>
+        <p class="slide-text long">Before his prophethood, the people of Mecca called him al-Amīn — the trustworthy — and entrusted him their goods. Even while its leaders fought him and his followers, they continued to entrust him their wealth. And when he had to flee Mecca to escape being killed, he still made sure that every trust was returned to its owner — including to the very people who wanted to kill him.</p>
+        <p class="slide-text long">Years later, his fiercest enemy Abu Sufyan was questioned before Heraclius, the Emperor of Byzantium: had his people ever accused Muhammad ﷺ of lying? Abu Sufyan — still at war with him — answered: No.</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:7" target="_blank" rel="noopener">Sahih al-Bukhari 7 ↗</a>
+      </div>
+    </section>
+
+    <section class="slide" aria-label="The eclipse: a golden opportunity declined">
+      <div class="slide-inner">
+        <p class="slide-tag">Part III · He was no liar</p>
+        <p class="slide-text long">When the Prophet's ﷺ infant son Ibrahim died, a total solar eclipse occurred. The people of Medina believed the sun itself was mourning his son — the perfect opportunity for any false prophet to be raised above human status.</p>
+        <p class="slide-text long">Instead, he gathered the people in the mosque and publicly corrected the rumour: the sun and the moon are among the signs of Allah — they do not eclipse for the death or the life of anyone.</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:1060" target="_blank" rel="noopener">Sahih al-Bukhari 1060 ↗</a>
+        <p class="slide-timeline"><span>A golden opportunity</span><span class="tl-line"></span><span><strong>Declined</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Part IV · The preservation -->
+    <section class="slide" aria-label="The preservation of the Quran">
+      <div class="slide-inner">
+        <p class="slide-tag">Part IV · The preservation</p>
+        <p class="slide-text long">For more than 1,400 years the Quran has been memorised from generation to generation, in every corner of the world. Today tens of millions of people — most of whom have never met — recite the exact same text, word for word. And manuscripts from the 7th century confirm it: the text has remained unchanged.</p>
+        <div class="verse" style="margin: 1.4rem auto;">
+          <p class="verse-text" style="font-size: clamp(1.1rem, 2.4vw, 1.4rem);">Indeed, it is We who sent down the message, and indeed, We will be its guardian.</p>
+          <span class="verse-ref">[15:9]</span>
+        </div>
+        <p class="slide-timeline"><span>Promised <strong>7th century</strong></span><span class="tl-line"></span><span>Intact <strong>today</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Part V · Knowledge no one could have known -->
+    <section class="slide" aria-label="Imagine the 7th century">
+      <div class="slide-inner">
+        <p class="slide-tag">Part V · Knowledge no one could have known</p>
+        <p class="slide-text long">To picture this, imagine that in the 7th century a book appeared, at a time when people thought that the Earth was flat and that the stars revolved around it. No one at that time knew that the universe is immeasurably larger than the sun, moon and stars in the sky. Amid the searing heat of the Arabian desert, among nomads who revered poetry and were constantly embroiled in tribal wars, an illiterate man proclaimed this book, without ever having learned to read or write, and without access to modern science.</p>
+        <p class="slide-text long">And yet the Quran describes things that were discovered only over 1,000 years later.</p>
+      </div>
+    </section>
+
+    <!-- Expanding universe -->
+    <section class="slide" aria-label="The expanding universe">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 01 · Cosmology</p>
+        <p class="slide-text">The Quran speaks of a universe that is expanding (51:47), a discovery that even Einstein ruled out until modern astronomy proved it in 1929. Stephen Hawking even described this as “one of the great intellectual revolutions of the twentieth century.”</p>
+        <a class="slide-verse" href="https://quran.com/51/47" target="_blank" rel="noopener">Quran 51:47 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>1929</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Big Bang -->
+    <section class="slide" aria-label="Heaven and earth as a single mass">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 02 · Cosmology</p>
+        <p class="slide-text">The Quran speaks of the heaven and the earth once being a single mass that was separated (21:30), as described by the Big Bang theory, which was first published in 1927.</p>
+        <a class="slide-verse" href="https://quran.com/21/30" target="_blank" rel="noopener">Quran 21:30 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>1927</strong></span></p>
+      </div>
+    </section>
+
+    <!-- The travelling sun -->
+    <section class="slide" aria-label="The sun travels through the universe">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 03 · Astronomy</p>
+        <p class="slide-text">Another mighty revelation of the Quran was that the sun purposefully travels through the universe (36:38). At that time the sun was, for the people of that era, nothing more than a heavenly body that orbited the Earth. Isaac Newton and René Descartes were, in the 17th century, the first to describe theoretically that the sun moves through space.</p>
+        <a class="slide-verse" href="https://quran.com/36/38" target="_blank" rel="noopener">Quran 36:38 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>17th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Protective sky -->
+    <section class="slide" aria-label="The protective sky">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 04 · Atmosphere</p>
+        <p class="slide-text">The Quran also mentioned the protective function of the sky (21:32), whereas the protective function of our atmosphere was discovered only in the 20th century.</p>
+        <a class="slide-verse" href="https://quran.com/21/32" target="_blank" rel="noopener">Quran 21:32 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>20th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Mountains as pegs -->
+    <section class="slide" aria-label="Mountains as pegs">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 05 · Geology</p>
+        <p class="slide-text">It compares mountains to pegs that reach deep into the earth (78:7), a geological fact that was discovered only during the “Great Trigonometrical Survey of India” in the 19th century.</p>
+        <a class="slide-verse" href="https://quran.com/78/7" target="_blank" rel="noopener">Quran 78:7 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>19th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Internal waves -->
+    <section class="slide" aria-label="Internal ocean waves">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 06 · Oceanography</p>
+        <p class="slide-text">It even describes internal ocean waves that travel beneath the surface (24:40), a phenomenon that was demonstrated only in the 20th century.</p>
+        <a class="slide-verse" href="https://quran.com/24/40" target="_blank" rel="noopener">Quran 24:40 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>20th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Prefrontal cortex -->
+    <section class="slide" aria-label="The forehead and lying">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 07 · Neuroscience</p>
+        <p class="slide-text">Over 1,000 years before the existence of modern brain research, the Quran pointed specifically to the forehead being the place of lying (96:15-16), a region that science today calls the prefrontal cortex.</p>
+        <a class="slide-verse" href="https://quran.com/96/15-16" target="_blank" rel="noopener">Quran 96:15-16 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>20th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Pain receptors -->
+    <section class="slide" aria-label="Pain depends on the skin">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 08 · Medicine</p>
+        <p class="slide-text">It also pointed out that pain depends on the skin (4:56), long before physicians discovered pain receptors, 90% of which are located in the skin.</p>
+        <a class="slide-verse" href="https://quran.com/4/56" target="_blank" rel="noopener">Quran 4:56 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>20th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Mosquito -->
+    <section class="slide" aria-label="The mosquito and what is upon it">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 09 · Biology</p>
+        <p class="slide-text">It gave the example of the female mosquito and “what is upon it” (2:26), over 1,300 years before the tiny ectoparasite Culicoides (Trithicoides) anophelis was discovered on the backs of mosquitoes with modern microscopes.</p>
+        <a class="slide-verse" href="https://quran.com/2/26" target="_blank" rel="noopener">Quran 2:26 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>20th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Honeybee -->
+    <section class="slide" aria-label="The honeybee">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 10 · Biology</p>
+        <p class="slide-text long">And over 1,400 years ago the Quran describes that the honeybee is female and carries honey in its stomach, details that were completely unknown. Aristotle was mistaken about the sex of bees, and it was not until 1670 that Jan Swammerdam proved that the worker bees are indeed female (16:68-69).</p>
+        <p class="slide-text long">But that is not all. The Quran speaks of several stomachs of the bee. Centuries later, biology confirms that bees possess two, one for digestion and one as a honey store.</p>
+        <a class="slide-verse" href="https://quran.com/16/68-69" target="_blank" rel="noopener">Quran 16:68-69 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>1670</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Embryology -->
+    <section class="slide" aria-label="Embryology">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 11 · Embryology</p>
+        <p class="slide-text long">The next point is no less incredible. In the 7th century the Quran describes that the human being arises from a “mixed drop” of male and female fluid (76:2) and then names the following stages of development with a precision (23:12-14) that only modern embryology could confirm. At the time — and for centuries afterward — the conceptions of this were fundamentally wrong. Aristotle taught that the male seed shaped the woman's menstrual blood into the embryo. In the 17th century sperm were discovered and thought to be parasites, or people believed in tiny, fully formed humans within the sperm or egg. It was not until 1876 that Oskar Hertwig discovered that life actually begins through the fusion of sperm and egg cell.</p>
+        <a class="slide-verse" href="https://quran.com/23/12-14" target="_blank" rel="noopener">Quran 76:2 · 23:12-14 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Confirmed <strong>1876</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Prophecy of the Romans -->
+    <section class="slide" aria-label="The prophecy of the Romans">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 12 · Prophecy</p>
+        <p class="slide-text">In addition to these detailed scientific facts, the Quran made highly improbable prophecies — for example, it foretold that the Romans, after their crushing defeat by the Persians, would defeat the Persians within three to nine years (30:2-4), a prophecy that seemed impossible at the time but later came true.</p>
+        <a class="slide-verse" href="https://quran.com/30/2-4" target="_blank" rel="noopener">Quran 30:2-4 ↗</a>
+        <p class="slide-timeline"><span>Foretold</span><span class="tl-line"></span><span><strong>Fulfilled</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Abu Lahab -->
+    <section class="slide" aria-label="The prophecy of Abu Lahab">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 13 · Prophecy</p>
+        <p class="slide-text long">The Quran declared early on that Abu Lahab, the Prophet's ﷺ own uncle and one of Islam's fiercest enemies, would die a disbeliever and end in the Fire (111:1-5). To expose the Quran as false, he only had to say — even insincerely — "I believe." One sentence.</p>
+        <p class="slide-text long">He fought Islam for the rest of his life, yet neither he nor his wife ever spoke it. Both died exactly as the Quran foretold.</p>
+        <a class="slide-verse" href="https://quran.com/111" target="_blank" rel="noopener">Quran 111:1-5 ↗</a>
+        <p class="slide-timeline"><span>Foretold</span><span class="tl-line"></span><span><strong>Fulfilled</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Badr -->
+    <section class="slide" aria-label="The prophecy of the defeated assembly">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 14 · Prophecy</p>
+        <p class="slide-text long">While the Muslims were still a small, persecuted group in Mecca, without any army, the Quran declared: "The assembly will be defeated and will turn their backs." Umar said that he wondered: which assembly could this mean?</p>
+        <p class="slide-text long">He found out at the battle of Badr — when the outnumbered Muslims broke the army of the Quraysh, and he saw the Prophet ﷺ reciting this very verse.</p>
+        <a class="slide-verse" href="https://quran.com/54/45" target="_blank" rel="noopener">Quran 54:45 ↗</a>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:4875" target="_blank" rel="noopener">Sahih al-Bukhari 4875 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>in Mecca</strong></span><span class="tl-line"></span><span>Fulfilled <strong>at Badr, 624</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Entering Mecca -->
+    <section class="slide" aria-label="The prophecy of entering Mecca in safety">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 15 · Prophecy</p>
+        <p class="slide-text long">In the year the Muslims were turned away from Mecca and prevented from performing the pilgrimage, the Quran promised: "You will surely enter the Sacred Mosque, if Allah wills, in safety, with your heads shaved or hair shortened, fearing nothing."</p>
+        <p class="slide-text long">Imagine putting such a promise in writing while your enemies control the city. The next year, the Muslims performed the pilgrimage in safety — and the year after, Mecca opened its gates to them.</p>
+        <a class="slide-verse" href="https://quran.com/48/27" target="_blank" rel="noopener">Quran 48:27 ↗</a>
+        <p class="slide-timeline"><span>Promised <strong>628</strong></span><span class="tl-line"></span><span>Fulfilled <strong>629</strong></span></p>
+      </div>
+    </section>
+
+    <!-- The Trench -->
+    <section class="slide" aria-label="The prophecy at the trench">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 16 · Prophecy</p>
+        <p class="slide-text long">In 627, a combined army of 10,000 advanced towards Medina to wipe out the Muslims once and for all. While digging a defensive trench, the companions hit a rock too hard to break, so they sought the help of the Prophet ﷺ. He struck it three times, and with each strike came a flash of light. He said: the keys of ancient Syria are granted to me — Persia is granted to me, I can see the white palace of Madain — the keys of Yemen are granted to me, I can see the gates of Sana'a.</p>
+        <p class="slide-text long">Imagine: surrounded, outnumbered and awaiting destruction — and he promises his followers the palaces of the empires around them. Within decades, all three were in Muslim hands.</p>
+        <a class="slide-verse" href="https://sunnah.com/nasai:3176" target="_blank" rel="noopener">Sunan an-Nasa'i 3176 ↗</a>
+        <p class="slide-timeline"><span>Foretold <strong>627</strong></span><span class="tl-line"></span><span>Fulfilled <strong>within decades</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Khosrau -->
+    <section class="slide" aria-label="The prophecy of the end of Khosrau">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 17 · Prophecy</p>
+        <p class="slide-text long">"When Khosrau perishes, there will be no Khosrau after him." This was said when Persia was one of the two superpowers of the world. And indeed: with Yazdegerd III the Persian Empire fell, and no Khosrau ever ruled again.</p>
+        <p class="slide-text long">The same hadith promised that their treasures would be spent in the cause of Allah — which is exactly what happened under Umar.</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:3618" target="_blank" rel="noopener">Sahih al-Bukhari 3618 ↗</a>
+        <p class="slide-timeline"><span>Foretold <strong>7th century</strong></span><span class="tl-line"></span><span>Fulfilled <strong>651</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Suraqa -->
+    <section class="slide" aria-label="The bracelets of Chosroes">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 18 · Prophecy</p>
+        <p class="slide-text long">During his escape from Mecca, with a bounty on his head, the Prophet ﷺ was caught up by the bounty hunter Suraqa ibn Malik. What did the hunted refugee say to the man who came for his head? "How will it be with you when you wear the two bracelets of Chosroes?" — the emperor of Persia.</p>
+        <p class="slide-text long">Around fifteen years later, the treasures of Persia lay before Umar. He called for Suraqa and placed the bracelets of Chosroes on his wrists.</p>
+        <a class="slide-verse" href="https://www.reviewofreligions.org/45668/suraqah-bin-malik-the-bounty-hunter-the-prophecy-of-the-persian-bangles/" target="_blank" rel="noopener">Read the account ↗</a>
+        <p class="slide-timeline"><span>Foretold <strong>622</strong></span><span class="tl-line"></span><span>Fulfilled <strong>under Umar</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Uhud -->
+    <section class="slide" aria-label="The two martyrs on mount Uhud">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 19 · Prophecy</p>
+        <p class="slide-text long">One day the Prophet ﷺ climbed mount Uhud with Abu Bakr, Umar and Uthman, and the mountain shook beneath them. He said: "Be still, Uhud — upon you are none but a Prophet, a truthful one and two martyrs."</p>
+        <p class="slide-text long">Abu Bakr, the truthful one, died a natural death. Umar and Uthman were both assassinated. Could a human know which of his companions would die peacefully — and which would be murdered?</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:3675" target="_blank" rel="noopener">Sahih al-Bukhari 3675 ↗</a>
+        <p class="slide-timeline"><span>Foretold</span><span class="tl-line"></span><span>Fulfilled <strong>644 &amp; 656</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Fatima -->
+    <section class="slide" aria-label="Fatima: the first to follow him">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 20 · Prophecy</p>
+        <p class="slide-text long">In his final illness, the Prophet ﷺ whispered to his daughter Fatima that he would die from this illness — and she wept. Then he whispered to her that she would be the first of his family to follow him — and she laughed.</p>
+        <p class="slide-text long">Fatima was a young woman, yet she died only six months later, before anyone else of his family — exactly as her father had told her.</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:3623" target="_blank" rel="noopener">Sahih al-Bukhari 3623-3624 ↗</a>
+        <p class="slide-timeline"><span>Foretold <strong>632</strong></span><span class="tl-line"></span><span>Fulfilled <strong>six months later</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Hasan -->
+    <section class="slide" aria-label="Hasan reconciles two great groups">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 21 · Prophecy</p>
+        <p class="slide-text long">About his little grandson al-Hasan, the Prophet ﷺ said: "This son of mine is a sayyid, and perhaps Allah will reconcile two great groups of Muslims through him."</p>
+        <p class="slide-text long">Decades later, when two huge Muslim armies faced each other, al-Hasan gave up his claim to power and made peace with Muawiya, ending a civil war. The year 661 entered history as the "Year of Unity".</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:2704" target="_blank" rel="noopener">Sahih al-Bukhari 2704 ↗</a>
+        <p class="slide-timeline"><span>Foretold</span><span class="tl-line"></span><span>Fulfilled <strong>661</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Umm Haram -->
+    <section class="slide" aria-label="The first naval expedition">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 22 · Prophecy</p>
+        <p class="slide-text long">The Prophet ﷺ told Umm Haram that she would be among the first of his community to ride the sea in the cause of Allah. Keep in mind: these were desert Arabs — they had no fleet and no navy.</p>
+        <p class="slide-text long">Years later she sailed with the first Muslim naval expedition to Cyprus, and died there — exactly as foretold.</p>
+        <a class="slide-verse" href="https://sunnah.com/bukhari:2799" target="_blank" rel="noopener">Sahih al-Bukhari 2799 ↗</a>
+        <p class="slide-timeline"><span>Foretold</span><span class="tl-line"></span><span>Fulfilled <strong>~649</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Constantinople -->
+    <section class="slide" aria-label="The conquest of Constantinople">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 23 · Prophecy</p>
+        <p class="slide-text long">"You will surely conquer Constantinople. How excellent is its commander, and how excellent is its army."</p>
+        <p class="slide-text long">For 800 years, army after army failed before the strongest walls in the world — until 1453, when Mehmed II took the city. Which human could promise his followers a victory 800 years ahead?</p>
+        <a class="slide-verse" href="https://hadithunlocked.com/ahmad:18957" target="_blank" rel="noopener">Musnad Ahmad 18957 ↗</a>
+        <p class="slide-timeline"><span>Foretold <strong>7th century</strong></span><span class="tl-line"></span><span>Fulfilled <strong>1453</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Tall buildings -->
+    <section class="slide" aria-label="The prophecy of the tall buildings">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 24 · Prophecy</p>
+        <p class="slide-text long">The Prophet Muhammad ﷺ foretold that "the barefoot, naked shepherds of camels" would one day compete in constructing the tallest buildings.</p>
+        <p class="slide-text long">Today the world's tallest tower, the Burj Khalifa, stands in Dubai — and Saudi Arabia is building the Jeddah Tower to surpass it. A competition for the sky, on the very peninsula where those shepherds herded their camels.</p>
+        <a class="slide-verse" href="https://sunnah.com/muslim:8a" target="_blank" rel="noopener">Sahih Muslim 8a ↗</a>
+        <p class="slide-timeline"><span>Foretold <strong>7th century</strong></span><span class="tl-line"></span><span>Fulfilled <strong>today</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Haman -->
+    <section class="slide" aria-label="The name Haman">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 25 · Lost history</p>
+        <p class="slide-text long">Besides prophecies, the Quran also revealed lost knowledge — for example, that Pharaoh commanded one of his ministers by the name of “Haman” to build him a tower so that he might reach God (28:38). Now, no written document from the 7th century could contain a hitherto unknown hieroglyphic name, since the meaning of the hieroglyphs had at that time fallen completely into oblivion. It was not until the 19th century that hieroglyphic writing was deciphered. The surgeon and historian Dr. Maurice Bucaille researched this and discovered the name on an Egyptian stone tablet in Vienna, as well as the fact that Haman held the title of “overseer of the stone-quarry workers.” Whether it is the same Haman remains open, but the name existed, and the man was responsible for construction. How could an illiterate man in the 7th century know such a detail, if not through divine revelation?</p>
+        <a class="slide-verse" href="https://quran.com/28/38" target="_blank" rel="noopener">Quran 28:38 ↗</a>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Deciphered <strong>19th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Pharaohs and kings -->
+    <section class="slide" aria-label="Pharaohs and kings">
+      <div class="slide-inner">
+        <p class="slide-tag">Sign 26 · Lost history</p>
+        <p class="slide-text long">Likewise, the Quran distinguishes precisely between “Pharaohs” and “kings.” For centuries it was assumed that all Egyptian rulers were Pharaohs. Only the deciphering of the hieroglyphs showed that the title “Pharaoh” was used only in a later era. How, then, could a human being in the 7th century know the difference? Even in the Bible it is erroneously mentioned that Abraham, Joseph and Moses (peace and blessings be upon them) had dealings with Pharaohs.</p>
+        <p class="slide-timeline"><span>Revealed <strong>7th century</strong></span><span class="tl-line"></span><span>Deciphered <strong>19th century</strong></span></p>
+      </div>
+    </section>
+
+    <!-- Synthesis -->
+    <section class="slide" aria-label="All of this in one book">
+      <div class="slide-inner">
+        <div class="ornament"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></div>
+        <p class="slide-text long">All this knowledge in a single, orally transmitted masterpiece, without even a single error or contradiction. Statements that were confirmed more than 1,000 years later through microscopes, telescopes and modern research.</p>
+        <p class="slide-text long">Even today, with supercomputers and the most advanced technology, it would be impossible to write a book that simultaneously creates a unique literary form, contains lost historical secrets, flawlessly predicts improbable future events, and describes scientific facts that would only be discovered centuries later.</p>
+      </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="slide" aria-label="The conclusion">
+      <div class="slide-inner">
+        <p class="slide-tag">The conclusion</p>
+        <p class="slide-text long">Who other than God could have revealed to a human being in the 7th century — in a society without scientific medicine, without books, without a laboratory, without microscopes or telescopes and without scientific research — an oral message containing medical, cosmological and historical details that were only confirmed centuries later through modern science, and whose linguistic beauty no poet has been able to imitate to this day?</p>
+        <h2 class="slide-title" style="font-size: clamp(1.6rem, 4.5vw, 2.4rem);">It can only be a divine message.</h2>
+        <div class="slide-cta">
+          <a class="btn" href="index.html">Begin the journey <span class="arrow">→</span></a>
+          <a class="btn-ghost" href="chapter-5.html">Read the full chapter</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="deck-controls">
+    <div class="deck-bar"><span id="deckBar"></span></div>
+    <div class="deck-nav">
+      <button class="deck-btn" id="deckPrev" aria-label="Previous slide">←</button>
+      <p class="deck-count" id="deckCount" aria-live="polite"><b>1</b> / 18</p>
+      <button class="deck-btn" id="deckNext" aria-label="Next slide">→</button>
+    </div>
+  </div>
+
+  <footer>
+    <p class="footer-brand">✦ The First Cause</p>
+    <p>The Journey to the Beginning of Everything</p>
+    <div class="footer-nav">
+      <a href="index.html">Start</a>
+      <a href="chapter-5.html">Chapter V</a>
+      <a href="resources.html">Resources</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+  (function () {
+    "use strict";
+    var slides = Array.prototype.slice.call(document.querySelectorAll(".deck .slide"));
+    if (!slides.length) return;
+
+    document.body.classList.add("deck-on");
+
+    var bar = document.getElementById("deckBar");
+    var count = document.getElementById("deckCount");
+    var prevBtn = document.getElementById("deckPrev");
+    var nextBtn = document.getElementById("deckNext");
+    var total = slides.length;
+    var current = 0;
+
+    var hash = parseInt((location.hash || "").replace("#slide-", ""), 10);
+    if (hash >= 1 && hash <= total) current = hash - 1;
+
+    function render() {
+      slides.forEach(function (s, i) {
+        s.classList.toggle("is-active", i === current);
+        s.classList.toggle("is-left", i < current);
+        s.setAttribute("aria-hidden", i === current ? "false" : "true");
+      });
+      bar.style.width = ((current + 1) / total) * 100 + "%";
+      count.innerHTML = "<b>" + (current + 1) + "</b> / " + total;
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+      if (history.replaceState) {
+        history.replaceState(null, "", current === 0 ? location.pathname : "#slide-" + (current + 1));
+      }
+    }
+
+    function go(delta) {
+      var next = Math.min(total - 1, Math.max(0, current + delta));
+      if (next === current) return;
+      current = next;
+      slides[current].scrollTop = 0;
+      render();
+    }
+
+    // When a slide's text is taller than the screen, let it scroll before flipping
+    function canScroll(dir) {
+      var s = slides[current];
+      if (s.scrollHeight <= s.clientHeight + 2) return false;
+      return dir > 0
+        ? s.scrollTop + s.clientHeight < s.scrollHeight - 2
+        : s.scrollTop > 2;
+    }
+
+    prevBtn.addEventListener("click", function () { go(-1); });
+    nextBtn.addEventListener("click", function () { go(1); });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === " " || e.key === "PageDown") {
+        if ((e.key === "ArrowDown" || e.key === " " || e.key === "PageDown") && canScroll(1)) return;
+        e.preventDefault(); go(1);
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp" || e.key === "PageUp") {
+        if ((e.key === "ArrowUp" || e.key === "PageUp") && canScroll(-1)) return;
+        e.preventDefault(); go(-1);
+      } else if (e.key === "Home") {
+        e.preventDefault(); current = 0; render();
+      } else if (e.key === "End") {
+        e.preventDefault(); current = total - 1; render();
+      }
+    });
+
+    var touchX = null, touchY = null;
+    document.addEventListener("touchstart", function (e) {
+      if (e.touches.length !== 1) return;
+      touchX = e.touches[0].clientX;
+      touchY = e.touches[0].clientY;
+    }, { passive: true });
+    document.addEventListener("touchend", function (e) {
+      if (touchX === null) return;
+      var dx = e.changedTouches[0].clientX - touchX;
+      var dy = e.changedTouches[0].clientY - touchY;
+      touchX = touchY = null;
+      if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1);
+      else if (Math.abs(dy) > 55 && Math.abs(dy) > Math.abs(dx) && !canScroll(dy < 0 ? 1 : -1)) go(dy < 0 ? 1 : -1);
+    }, { passive: true });
+
+    var wheelLock = 0;
+    document.addEventListener("wheel", function (e) {
+      var now = Date.now();
+      if (Math.abs(e.deltaY) < 12) return;
+      if (canScroll(e.deltaY > 0 ? 1 : -1)) { wheelLock = now; return; }
+      if (now - wheelLock < 700) return;
+      wheelLock = now;
+      go(e.deltaY > 0 ? 1 : -1);
+    }, { passive: true });
+
+    render();
+  })();
+  </script>
+</body>
+</html>
