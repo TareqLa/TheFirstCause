@@ -778,6 +778,19 @@ footer .footer-nav {
 }
 footer .footer-nav a { color: var(--muted); transition: color 0.25s ease; }
 footer .footer-nav a:hover { color: var(--gold); }
+footer .footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 1.3rem;
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+footer .footer-legal a { color: var(--muted); opacity: 0.75; transition: color 0.25s ease, opacity 0.25s ease; }
+footer .footer-legal a:hover { color: var(--gold); opacity: 1; }
 
 /* ---------- Journey state: resume banner (landing) ---------- */
 .resume-banner {

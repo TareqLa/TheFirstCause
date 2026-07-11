@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seite nicht gefunden — Die Erste Ursache</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <style>
+    .nf-wrap {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .nf-mark {
+      color: var(--gold);
+      font-size: 2rem;
+      text-shadow: 0 0 24px var(--gold-glow);
+      margin-bottom: 1.5rem;
+    }
+    .nf-code {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(4rem, 12vw, 7rem);
+      line-height: 1;
+      color: var(--gold);
+      margin: 0;
+    }
+    .nf-title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin: 1rem 0 0.5rem;
+    }
+    .nf-sub {
+      color: var(--muted);
+      max-width: 34rem;
+      margin: 0 0 2rem;
+    }
+    .nf-langs {
+      margin-top: 2.5rem;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    .nf-langs a { margin: 0 0.5rem; }
+  </style>
+</head>
+<body>
+  <main class="nf-wrap">
+    <div class="nf-mark" aria-hidden="true">✦</div>
+    <p class="nf-code">404</p>
+    <h1 class="nf-title">Diese Seite existiert nicht</h1>
+    <p class="nf-sub">Die gesuchte Seite wurde nicht gefunden — aber die Reise zum Anfang von allem beginnt nur einen Klick entfernt.<br><span lang="en">This page could not be found.</span></p>
+    <a class="btn" href="/">Zur Startseite <span class="arrow">→</span></a>
+    <p class="nf-langs">
+      <a href="/" hreflang="de">DE</a>·
+      <a href="/en/" hreflang="en">EN</a>·
+      <a href="/es/" hreflang="es">ES</a>·
+      <a href="/pt/" hreflang="pt">PT</a>·
+      <a href="/fr/" hreflang="fr">FR</a>·
+      <a href="/it/" hreflang="it">IT</a>·
+      <a href="/hi/" hreflang="hi">HI</a>
+    </p>
+    <p class="nf-langs">
+      <a href="/impressum.html">Impressum</a>·
+      <a href="/datenschutz.html">Datenschutz</a>
+    </p>
+  </main>
+</body>
+</html>

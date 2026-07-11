@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tareqla.github.io/TheFirstCause/sitemap.xml
+Sitemap: https://whygodexists.org/sitemap.xml
