@@ -443,7 +443,7 @@
       return el.tagName === "A" && !el.classList.contains("nav-link");
     });
     var navLabel = navStations.querySelector(".nav-label");
-    var resourceLink = navStations.querySelector(".nav-link");
+    var textLinks = navStations.querySelectorAll(".nav-link");
     var langSwitch = navStations.querySelector(".lang-switch");
 
     var menu = document.createElement("div");
@@ -489,14 +489,14 @@
     });
     inner.appendChild(stationsWrap);
 
-    if (resourceLink) {
+    textLinks.forEach(function (link) {
       var res = document.createElement("a");
-      res.href = resourceLink.getAttribute("href");
+      res.href = link.getAttribute("href");
       res.className = "mobile-menu-link";
-      if (resourceLink.classList.contains("is-active")) res.classList.add("is-active");
-      res.textContent = resourceLink.textContent.trim();
+      if (link.classList.contains("is-active")) res.classList.add("is-active");
+      res.textContent = link.textContent.trim();
       inner.appendChild(res);
-    }
+    });
 
     if (langSwitch) {
       var langs = langSwitch.cloneNode(true);

@@ -1219,6 +1219,7 @@ footer .footer-legal a:hover { color: var(--gold); opacity: 1; }
   transition: border-color 0.25s ease, background 0.25s ease;
 }
 .mobile-menu-link:hover { border-color: var(--gold); background: rgba(212, 175, 95, 0.07); }
+.mobile-menu-link + .mobile-menu-link { margin-top: 0.7rem; }
 .mobile-menu-langs {
   display: flex;
   justify-content: center;
@@ -1424,6 +1425,51 @@ footer .footer-legal a:hover { color: var(--gold); opacity: 1; }
   .reveal { opacity: 1; transform: none; }
   .hero-kicker, .hero h1, .hero-sub, .hero-cta,
   .chapter-num, .chapter-eyebrow, .chapter-hero h1 { opacity: 1; }
+}
+
+/* ---------- Question pages (direct answers from the journey) ---------- */
+.q-note {
+  position: relative;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  padding: clamp(1.4rem, 4vw, 2rem) clamp(1.3rem, 4vw, 2.2rem);
+  margin: 0 0 3rem;
+  background: rgba(10, 16, 32, 0.5);
+}
+.q-note .q-note-tag {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 1rem;
+}
+.q-note p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 1.1rem;
+}
+.q-note p:last-child { margin-bottom: 0; }
+.q-note a { border-bottom: 1px dotted rgba(212, 175, 95, 0.45); }
+.q-note a:hover { border-bottom-style: solid; }
+
+.excerpt {
+  position: relative;
+  border-left: 1px solid var(--line);
+  padding-left: clamp(1.1rem, 3.5vw, 1.9rem);
+  margin: 0 0 1rem;
+}
+.excerpt .excerpt-tag {
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin: 0 0 2.2rem;
 }
 
 /* ---------- Voice reader (text-to-speech) ---------- */
