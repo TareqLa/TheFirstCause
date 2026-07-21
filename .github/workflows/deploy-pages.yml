@@ -28,3 +28,10 @@ jobs:
           path: website
       - id: deployment
         uses: actions/deploy-pages@v4
+      - name: Notify IndexNow
+        run: |
+          urls=$(grep -o '<loc>[^<]*</loc>' website/sitemap.xml | sed -e 's/<loc>//' -e 's#</loc>##')
+          url_json=$(printf '%s\n' "$urls" | jq -R . | jq -s .)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json" \
+            -d "{\"host\":\"whygodexists.org\",\"key\":\"d1efd61d0d624acebe8352f14098cfb2\",\"keyLocation\":\"https://whygodexists.org/d1efd61d0d624acebe8352f14098cfb2.txt\",\"urlList\":$url_json}"
